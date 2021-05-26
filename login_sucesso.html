@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JBank</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			*{
+				font-family: sans-serif;
+			}
+			p{
+			font-size: 20px;
+			}
+			h1{
+				text-align: center;
+			}
+			#container{
+				width: 400px;
+				background-color: #A020F0;
+				margin: 0 auto;
+				padding: 10px;
+				border-radius: 10px;
+			}
+			.botao{
+				border-radius: 5px; 
+				width: 100px;
+				height: 50px;
+				margin:0px 47px;
+			}
+			.dados{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1>JBank&reg;</h1>
+			<p><span class="campo">Nome:</span>		<span class="dados">Seu nome</span></p>
+			<p><span class="campo">Agencia:</span>	<span class="dados">0001</span></p>
+			<p><span class="campo">Conta:</span>	<span class="dados">20052021</span></p>
+			<p><span class="campo">Saldo:</span>	<span class="dados" id="saldo">0</span></p>
+			<label>
+				<input type="button" class="botao" name="depositar" id="depositar" onclick="novaConta.depositar(parseInt(prompt('Informe o valor do deposito')))" value="Depositar">
+			</label>
+			<label>
+				<input type="button" class="botao" name="sacar" id="sacar" onclick="novaConta.sacar(parseInt(prompt('Informe o valor do saque')))" value="Sacar">
+			</label>
+		</div>
+		<script type="text/javascript">
+
+			
+			class Conta{
+				constructor(nome,agencia,numConta,saldo){
+					this.nome = nome
+					this.agencia = agencia
+					this.numConta = numConta
+					this.saldo = saldo
+				}
+				depositar(valorDeposito){
+					this.saldo += valorDeposito
+					document.getElementById('saldo').innerHTML = this.saldo+',00'
+					alert('DEPOSITO REALIZADO COM SUCESSO!')
+				}
+				sacar(valorSaque){										
+					if(valorSaque <= this.saldo){
+						this.saldo -= valorSaque
+						document.getElementById('saldo').innerHTML = this.saldo+',00'
+						alert('SAQUE REALIZADO COM SUCESSO!')
+					}else{
+						alert(`NAO É POSSIVEL SACAR, SALDO INSUFICIENTE! 
+SEU SALDO ATUAL É: R$${this.saldo},00`)
+					}
+				}
+			}
+			let novaConta = new Conta('Jonas Ferreira Alves',100,250521,0)
+
+		
+		</script>
+	</body>
+</html>

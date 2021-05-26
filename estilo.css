@@ -1,0 +1,57 @@
+*{
+	font-family: sans-serif;
+}
+#container-principal{
+	width: 900px;
+	height: auto;
+	margin: 200px auto;
+}
+#cadastro{
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+#logar{
+	width: 200px;
+	height: 200px;
+	float: right;
+}
+#btn_login{
+	margin: 2px 55px;
+}
+a{
+	color: white;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 20px;
+}
+#btn_cadastro{
+	padding: 5px;
+	background-color: #A020F0;
+}
+#btn_cadastrar{
+	width: 615px;
+}
+.limpar{
+	clear: both;
+}
+.centralizar{
+	text-align: center;
+}
+.img{
+	width: 200px;
+	height: 160px;
+}
+.inputs{
+	padding: 5px;
+	margin: 2px;
+}
+.inputs_cadastro{
+	width: 600px;
+	height: 30px;
+	padding: 5px;
+	margin: 5px;
+}
+#img_sucesso{
+	margin: 0px 300px;
+}

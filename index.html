@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JBank Home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+<div id="container-principal">
+	<div id="cadastro">
+		<img class="img" src="imagens/cadastro.png">
+		<p class="centralizar" id="btn_cadastro"><a href="cadastro.html">Cadastre-se</a></p>
+	</div>
+	<div id="logar">
+		<img class="img" src="imagens/login.png">
+		<label>
+			<input class="inputs" type="text" name="login" placeholder="Usuário" id="campo_texto">
+		</label>
+		<label>
+			<input class="inputs" type="password" name="senha" placeholder="Senha" id="campo_senha">
+		</label>
+		<label>
+			<input class="inputs" type="button" name="btn_login" id="btn_login" value="ENTRAR" onclick="validaLogin()">
+		</label>
+	</div>
+	<div class="limpar"></div>
+</div>
+<script type="text/javascript">
+	function validaLogin(login,senha){
+		var login = document.getElementById('campo_texto').value
+		var senha = document.getElementById('campo_senha').value
+		if(login === 'alfalucha' && senha ==='ork7gh79'){
+			window.location.href = 'login_sucesso.html'
+		}else{
+			alert('Usuario ou senha incorreta!')
+		}
+	}
+</script>
+</body>
+</html>
